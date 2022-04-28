@@ -27,11 +27,11 @@ const paths = {
 	tsToJs: './dist/js',
 };
 
+// build js i ts
 function buildScripts(done) {
 	tsProject
 		.src()
 		.pipe(tsProject())
-		.js.pipe(dest(paths.tsToJs))
 		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
@@ -95,6 +95,6 @@ function watchForChanges(done) {
 	done();
 }
 
-const mainFunctions = parallel(handleKits, sassCompiler, javaScript, buildScripts, convertImages);
+const mainFunctions = parallel(handleKits, sassCompiler, buildScripts, convertImages);
 exports.cleanStuff = cleanStuff;
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges);
