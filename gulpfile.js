@@ -24,7 +24,6 @@ const paths = {
 	sassDest: './dist/css',
 	jsDest: './dist/js',
 	imgDest: './dist/img',
-	tsToJs: './dist/js',
 };
 
 // build js i ts
@@ -90,7 +89,7 @@ function startBrowserSync(done) {
 
 function watchForChanges(done) {
 	watch('./*.html').on('change', reload);
-	watch([paths.html, paths.sass, paths.js], parallel(handleKits, sassCompiler, javaScript)).on('change', reload);
+	watch([paths.html, paths.sass, paths.js], parallel(handleKits, sassCompiler, buildScripts)).on('change', reload);
 	watch(paths.img, convertImages).on('change', reload);
 	done();
 }
