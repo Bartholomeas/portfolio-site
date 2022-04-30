@@ -18,13 +18,14 @@ body {
 	// flex-direction: column;
 	// align-items: center;
 	// width: 100%;
+	background-color: var(--core);
 	height: 100%;
 }
 
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	font-family: 'Merriweather', serif;
+	font-family: 'Lora', serif;
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -76,21 +77,18 @@ textarea {
 .button__primary {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	padding: 0.8rem 2rem;
-	background-color: var(--primaryColor);
-	color: var(--white);
 	font-weight: bold;
 	font-size: var(--smallText);
 	border-radius: 32px;
 	transition: background-color 0.2s ease;
 	cursor: pointer;
-
-	&:hover {
-		background-color: var(--primaryDark);
-	}
+	@include shadow;
 }
 
 .button__icon {
 	font-size: 2rem;
 	padding-left: 1rem;
+	transition: transform 0.2s ease;
 }
