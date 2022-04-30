@@ -7,11 +7,12 @@
 		position: relative;
 		background-image: url('../../dist/img/background.jpg');
 		width: 100%;
-		height: 30rem;
-		background-size: cover;
+		height: 25rem;
+		// background-size: cover;
 		background-attachment: fixed;
 		object-fit: cover;
-		animation: slowGrowingBg 100s infinite alternate;
+		animation: slowGrowingBg 120s infinite alternate;
+		@include shadow;
 	}
 
 	&__avatar {

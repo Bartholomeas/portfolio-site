@@ -29,6 +29,8 @@
 	--smallPadding: 1.6rem;
 	--standardPadding: 2rem;
 	--bigPadding: 3.2rem;
+
+	--maxWidth: 1200px;
 }
 @mixin primaryGradient {
 	background: linear-gradient(180deg, #fedf78 0%, #f4bf09 68.51%);
@@ -48,3 +50,12 @@
 		background-position: right top;
 	}
 }
+
+// @keyframes ancientScroll {
+// 	from {
+// 		transform: scaleX(0) translateX(-50%);
+// 	}
+// 	to {
+// 		transform: scaleX(1) translateX(-50%);
+// 	}
+// }
