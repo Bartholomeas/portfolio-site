@@ -5,7 +5,7 @@
 		align-items: center;
 		gap: 3rem;
 		height: 100%;
-		min-height: 100vh;
+		min-height: 200vh;
 		width: 100%;
 		max-width: 1200px;
 		margin: 0 auto;
@@ -29,7 +29,6 @@
 		}
 		&--avatar-box,
 		&--content-box {
-			height: 300px;
 			width: 100%;
 			border-radius: 32px;
 			padding: var(--standardPadding);
@@ -37,10 +36,11 @@
 			@include shadow;
 		}
 		&--avatar-box {
+			position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			position: relative;
+			height: 300px;
 			overflow: hidden;
 		}
 		&--content-box {
@@ -48,34 +48,44 @@
 			display: flex;
 			flex-direction: column;
 			gap: 1.2rem;
-			z-index: 100;
+			height: 200px;
 
 			&::before {
 				content: '';
 				position: absolute;
-				height: 7rem;
+				height: 12rem;
 				width: auto;
-				left: 0;
-				bottom: -3rem;
+				left: -2rem;
+				bottom: -6rem;
 				aspect-ratio: 1 / 1;
 				background-repeat: no-repeat;
 				background-image: url('../../dist/img/triangle.svg');
-				// background-size: cover;
+				background-size: 100px;
 				background-position: center;
+				transform: rotate(120deg);
+				z-index: -9999;
 			}
 		}
 
 		&--heading {
-			font-size: var(--smallText);
+			font-size: var(--mediumText);
+			color: var(--fontColor);
 		}
 
 		&--text {
 			font-size: var(--verySmallText);
+			font-family: 'Merriweather';
+			color: var(--fontShade);
+			line-height: 150%;
 		}
 	}
 	&__avatar {
 		position: absolute;
 		height: 100%;
 		bottom: 0;
+	}
+
+	&__button {
+		align-self: flex-end;
 	}
 }

@@ -72,3 +72,25 @@ textarea {
 	width: 10rem;
 	transform: rotate(118deg);
 }
+
+.button__primary {
+	display: flex;
+	align-items: center;
+	padding: 0.8rem 2rem;
+	background-color: var(--primaryColor);
+	color: var(--white);
+	font-weight: bold;
+	font-size: var(--smallText);
+	border-radius: 32px;
+	transition: background-color 0.2s ease;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--primaryDark);
+	}
+}
+
+.button__icon {
+	font-size: 2rem;
+	padding-left: 1rem;
+}
