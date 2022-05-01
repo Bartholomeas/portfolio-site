@@ -4,8 +4,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 3rem;
-		height: 100%;
-		min-height: 200vh;
+		min-height: 50vh;
 		width: 100%;
 		max-width: 1200px;
 		margin: 0 auto;
@@ -13,7 +12,6 @@
 
 		@media only screen and(min-width:1260px) {
 			padding: var(--standardPadding) 0;
-			// padding: 0;
 		}
 	}
 
@@ -140,15 +138,5 @@
 		&:hover i {
 			transform: translateX(100%);
 		}
-	}
-}
-
-// SPECIALiTY
-.speciality {
-	&__wrapper {
-		display: flex;
-		width: 100%;
-		background-color: pink;
-		min-height: 100vh;
 	}
 }

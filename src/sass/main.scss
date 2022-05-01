@@ -14,12 +14,14 @@
 
 html,
 body {
+	height: 100%;
+}
+body {
 	// display: flex;
 	// flex-direction: column;
-	// align-items: center;
 	// width: 100%;
 	background-color: var(--core);
-	height: 100%;
+	font-size: 1.6rem;
 }
 
 html {
@@ -60,7 +62,9 @@ textarea {
 		width: 100%;
 	}
 	&__text {
-		font-size: var(--mediumText);
+		&__heading {
+			font-size: var(--mediumText);
+		}
 	}
 	&__circle {
 		height: 3rem;
