@@ -21,7 +21,7 @@
 	--fontShade: #6d6d6d;
 
 	// text
-	--verySmallText: 1.2rem;
+	--verySmallText: 1.4rem;
 	--smallText: 1.6rem;
 	--mediumText: 2.4rem;
 	--bigText: 3.2rem;
@@ -52,12 +52,3 @@
 		background-position: right top;
 	}
 }
-
-// @keyframes ancientScroll {
-// 	from {
-// 		transform: scaleX(0) translateX(-50%);
-// 	}
-// 	to {
-// 		transform: scaleX(1) translateX(-50%);
-// 	}
-// }
