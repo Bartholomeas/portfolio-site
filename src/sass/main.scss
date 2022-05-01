@@ -3,10 +3,11 @@
 @import './nav';
 @import './landing';
 @import './about';
+@import './speciality';
 
 *,
-*::after,
-*::before {
+* ::after,
+* ::before {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -63,6 +64,7 @@ textarea {
 	}
 	&__text {
 		&__heading {
+			color: var(--fontColor);
 			font-size: var(--mediumText);
 		}
 	}
@@ -91,4 +93,15 @@ textarea {
 	font-size: 2rem;
 	padding-left: 1rem;
 	transition: transform 0.2s ease;
+}
+
+.standard-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: var(--smallPadding) var(--bigPadding);
+	border-radius: 32px;
+	background-color: var(--coreAdditional);
+	overflow-y: auto;
+	@include shadow;
 }

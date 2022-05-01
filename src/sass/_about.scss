@@ -64,39 +64,7 @@
 		}
 		&--content-box {
 			position: relative;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			height: auto;
-			padding: var(--smallPadding) var(--bigPadding);
-			overflow-y: auto;
-			// gap: 1.2rem;
-			background-color: var(--coreAdditional);
-			// &::before {
-			// 	content: '';
-			// 	position: absolute;
-			// 	height: 12rem;
-			// 	width: auto;
-			// 	left: -2rem;
-			// 	bottom: -6rem;
-			// 	// top: 3rem;
-			// 	aspect-ratio: 1 / 1;
-			// 	background-repeat: no-repeat;
-			// 	background-image: url('../../dist/img/triangle.svg');
-			// 	background-size: 100px;
-			// 	background-position: center;
-			// 	transform: rotate(120deg);
-			// 	// background-color: pink;
-			// 	// z-index: -9999;
 
-			// 	@media only screen and(min-width:766px) {
-			// 		top: auto;
-			// 		bottom: -50%;
-			// 		bottom: 0;
-			// 		left: -1rem;
-			// 		transform: translateY(50%);
-			// 	}
-			// }
 			@media only screen and(min-width:768px) {
 				width: 100%;
 				height: 80%;
