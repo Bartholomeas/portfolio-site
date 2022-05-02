@@ -1,10 +1,12 @@
 @import './dark-theme';
 @import './variables';
+@import './animations';
 @import './universals';
 @import './nav';
 @import './landing';
 @import './about';
 @import './speciality';
+@import './assurance';
 
 *,
 * ::after,
@@ -19,9 +21,9 @@ body {
 	height: 100%;
 }
 body {
-	display: flex;
-	flex-direction: column;
-	gap: 15rem;
+	// display: flex;
+	// flex-direction: column;
+	// gap: 15rem;
 	background-color: var(--core);
 	font-size: 1.6rem;
 }
@@ -51,4 +53,8 @@ button {
 
 textarea {
 	resize: vertical;
+}
+
+.section__padding {
+	padding: 10rem 0;
 }

@@ -10,7 +10,7 @@
 		height: 25rem;
 		background-attachment: fixed;
 		object-fit: cover;
-		animation: slowGrowingBg 120s infinite alternate;
+		animation: movingBg 120s infinite alternate;
 		@include shadow;
 
 		@media only screen and(min-width:768px) {

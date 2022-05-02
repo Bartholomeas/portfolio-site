@@ -1,0 +1,16 @@
+@keyframes movingBg {
+	from {
+		background-position: left bottom;
+	}
+	to {
+		background-position: right top;
+	}
+}
+@keyframes rotatingRight {
+	from {
+		transform: translate(-30%, 30%) rotate(0);
+	}
+	to {
+		transform: translate(-30%, 30%) rotate(360deg);
+	}
+}

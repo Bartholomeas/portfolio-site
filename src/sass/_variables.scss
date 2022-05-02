@@ -23,6 +23,7 @@
 	// text
 	--verySmallText: 1.4rem;
 	--smallText: 1.6rem;
+	--smallerMediumText: 2rem;
 	--mediumText: 2.4rem;
 	--bigText: 3.2rem;
 	--biggerText: 4.8rem;
@@ -42,13 +43,4 @@
 }
 @mixin innerShadow {
 	box-shadow: inset 0px -14px 40px rgba(73, 100, 126, 0.2);
-}
-
-@keyframes slowGrowingBg {
-	from {
-		background-position: left bottom;
-	}
-	to {
-		background-position: right top;
-	}
 }
