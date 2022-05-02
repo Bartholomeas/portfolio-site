@@ -1,5 +1,6 @@
 @import './dark-theme';
 @import './variables';
+@import './universals';
 @import './nav';
 @import './landing';
 @import './about';
@@ -18,9 +19,9 @@ body {
 	height: 100%;
 }
 body {
-	// display: flex;
-	// flex-direction: column;
-	// width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 15rem;
 	background-color: var(--core);
 	font-size: 1.6rem;
 }
@@ -50,58 +51,4 @@ button {
 
 textarea {
 	resize: vertical;
-}
-
-// Globalne klasy
-.heading {
-	&__container {
-		display: flex;
-		align-items: center;
-		align-self: flex-start;
-		gap: 2rem;
-		padding: 4rem 0;
-		width: 100%;
-	}
-	&__text {
-		&__heading {
-			color: var(--fontColor);
-			font-size: var(--mediumText);
-		}
-	}
-	&__circle {
-		height: 3rem;
-		width: 3rem;
-		border-radius: 50%;
-		@include primaryGradient;
-	}
-}
-
-.button__primary {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0.8rem 2rem;
-	font-weight: bold;
-	font-size: var(--smallText);
-	border-radius: 32px;
-	transition: background-color 0.2s ease;
-	cursor: pointer;
-	@include shadow;
-}
-
-.button__icon {
-	font-size: 2rem;
-	padding-left: 1rem;
-	transition: transform 0.2s ease;
-}
-
-.standard-box {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	padding: var(--smallPadding) var(--bigPadding);
-	border-radius: 32px;
-	background-color: var(--coreAdditional);
-	// overflow-y: auto;
-	@include shadow;
 }
