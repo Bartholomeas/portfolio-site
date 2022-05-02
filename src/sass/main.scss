@@ -102,6 +102,6 @@ textarea {
 	padding: var(--smallPadding) var(--bigPadding);
 	border-radius: 32px;
 	background-color: var(--coreAdditional);
-	overflow-y: auto;
+	// overflow-y: auto;
 	@include shadow;
 }
