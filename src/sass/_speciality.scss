@@ -67,35 +67,52 @@
 	}
 
 	&__avatar {
-		position: relative;
 		height: auto;
 		width: 15rem;
 		padding: var(--standardPadding) 0;
 
-		// &--circle {
-		// 	position: absolute;
-		// 	width: 15rem;
-		// 	height: 15rem;
-		// 	left: 0;
-		// 	bottom: 0;
-		// 	border-radius: 50%;
-		// 	background-color: gold;
-		// 	z-index: 10000;
-		// }
-		@media only screen and(min-width: 768px) {
-			padding: 0;
-		}
-
+		&--projecting,
 		&--coding {
-			position: absolute;
-			align-self: flex-end;
-			width: 17rem;
-			top: -17rem;
-			right: 10%;
-			z-index: -1;
-
 			@media only screen and (min-width: 768px) {
-				top: -16rem;
+				width: 80%;
+			}
+		}
+		&--projecting {
+			transform: translate(10%, -10%);
+		}
+		&--coding {
+			width: 100%;
+			@media only screen and(min-width: 768px) {
+				width: 90%;
+				transform: translateY(-10%);
+			}
+		}
+		&--box {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 17rem;
+			height: 17rem;
+			border-radius: 50%;
+			@include shadow;
+
+			@media only screen and(min-width:768px) {
+				height: 20rem;
+				width: 20rem;
+			}
+
+			&-projecting {
+				position: relative;
+				background-color: var(--primaryColor);
+				margin-top: 5rem;
+			}
+			&-coding {
+				align-self: flex-end;
+				top: -14rem;
+				right: 10%;
+				z-index: -1;
+				background-color: var(--secondaryColor);
 			}
 		}
 	}
