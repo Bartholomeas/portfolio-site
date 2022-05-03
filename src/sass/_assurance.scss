@@ -1,6 +1,73 @@
+#assurance {
+	background-color: var(--primaryColor);
+}
 .assurance {
 	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 150vh;
 		min-height: 100vh;
-		background-color: pink;
+		// max-height: 1080px;
+		margin: 0 auto;
+		padding: var(--standardPadding);
+		max-width: 1200px;
+		@media only screen and(min-width:768px) {
+			height: 100vh;
+		}
+	}
+
+	&__line {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		width: 0.8rem;
+		background-color: var(--fontColor);
+		height: 100%;
+		border-radius: 32px;
+		@include shadow;
+	}
+	&__circle-box {
+		position: relative;
+		width: 3rem;
+		height: 3rem;
+		background-color: var(--secondaryColor);
+		border-radius: 50%;
+		@include shadow;
+
+		@media only screen and(min-width:768px) {
+			&:nth-child(2n) {
+				transform: translateX(100px);
+			}
+		}
+	}
+
+	&__item {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 335px;
+		height: auto;
+		left: 50%;
+		top: 50%;
+		gap: 2rem;
+		transform: translate(-50%, -50%);
+		&-text {
+			font-size: var(--verySmallText);
+			color: var(--fontShade);
+		}
+	}
+
+	&__text-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__icon {
+		height: auto;
+		width: 20%;
 	}
 }

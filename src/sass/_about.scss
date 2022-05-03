@@ -45,6 +45,8 @@
 		}
 		&--avatar-box,
 		&--content-box {
+			flex-direction: column;
+			justify-content: flex-start;
 			width: 100%;
 			border-radius: 32px;
 			background-color: var(--coreAdditional);
@@ -77,12 +79,12 @@
 		}
 
 		&--text {
-			color: var(--fontColor);
+			color: var(--fontShade);
 			font-size: var(--verySmallText);
 			// font-family: 'Lora', serif;
 			line-height: 150%;
 
-			@media only screen and(min-width:780px) {
+			@media only screen and(min-width:820px) {
 				font-size: var(--smallText);
 			}
 		}

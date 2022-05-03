@@ -52,6 +52,7 @@
 
 	&__box {
 		position: relative;
+		flex-direction: column;
 		width: 100%;
 		height: 100%;
 		padding: var(--bigPadding);
@@ -63,7 +64,7 @@
 		&--heading {
 			font-size: var(--smallerMediumText);
 			&-role {
-				color: var(--fontShade);
+				color: var(--gray);
 				font-weight: 400;
 				font-size: var(--smallText);
 				margin-bottom: 1rem;
@@ -72,6 +73,7 @@
 		&--text {
 			line-height: 150%;
 			font-size: var(--verySmallText);
+			color: var(--fontShade);
 		}
 	}
 
