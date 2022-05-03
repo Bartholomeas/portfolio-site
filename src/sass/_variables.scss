@@ -18,7 +18,7 @@
 	--hover: #d1e1e4;
 
 	--fontColor: #2d2d2d;
-	--fontShade: #6d6d6d;	
+	--fontShade: #6d6d6d;
 
 	// text
 	--verySmallText: 1.4rem;
@@ -34,7 +34,9 @@
 	--bigPadding: 3.2rem;
 
 	--maxWidth: 1200px;
+	--borderRadius: 32px;
 }
+
 @mixin primaryGradient {
 	background: linear-gradient(180deg, #fedf78 0%, #f4bf09 68.51%);
 }

@@ -31,7 +31,7 @@
 	padding: 0.8rem 2rem;
 	font-weight: bold;
 	font-size: var(--smallText);
-	border-radius: 32px;
+	border-radius: var(--borderRadius);
 	transition: background-color 0.2s ease;
 	cursor: pointer;
 	@include shadow;
@@ -48,7 +48,7 @@
 	// flex-direction: column;
 	// justify-content: flex-start;
 	padding: var(--smallPadding) var(--bigPadding);
-	border-radius: 32px;
+	border-radius: var(--borderRadius);
 	background-color: var(--coreAdditional);
 	@include shadow;
 }
