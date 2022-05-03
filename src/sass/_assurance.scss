@@ -1,32 +1,30 @@
-#assurance {
-	background-color: var(--primaryColor);
-}
 .assurance {
 	&__wrapper {
+		// background-color: skyblue;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 150vh;
-		min-height: 100vh;
-		// max-height: 1080px;
+		height: 100vh;
+		width: 100%;
+		// max-width: 1200px;
 		margin: 0 auto;
-		padding: var(--standardPadding);
-		max-width: 1200px;
-		@media only screen and(min-width:768px) {
-			height: 100vh;
-		}
+		padding: 4rem var(--standardPadding);
 	}
-
+	&__background-image {
+		height: 100%;
+		background-size: cover;
+	}
 	&__line {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-		width: 0.8rem;
-		background-color: var(--fontColor);
 		height: 100%;
+		width: 0.8rem;
+		padding: 3rem 0;
 		border-radius: 32px;
+		background-color: var(--fontColor);
 		@include shadow;
 	}
 	&__circle-box {
@@ -45,14 +43,11 @@
 	}
 
 	&__item {
-		position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 335px;
-		height: auto;
-		left: 50%;
-		top: 50%;
+		// height: auto;
 		gap: 2rem;
 		transform: translate(-50%, -50%);
 		&-text {
@@ -67,7 +62,21 @@
 	}
 
 	&__icon {
-		height: auto;
-		width: 20%;
+		// height: auto;
+		// width: 20%;
+		height: 50px;
+		position: absolute;
+		width: auto;
+
+		&-bg {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100px;
+			width: 100px;
+			aspect-ratio: 1 / 1;
+			border-radius: 50%;
+			@include primaryGradient;
+		}
 	}
 }

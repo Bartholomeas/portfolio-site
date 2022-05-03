@@ -11,6 +11,9 @@
 		padding: 10rem var(--standardPadding);
 		overflow-x: hidden;
 
+		@media only screen and(min-width:992px) {
+			overflow-x: hidden;
+		}
 		@media only screen and(min-width:1260px) {
 			padding: var(--standardPadding) 0;
 		}
@@ -21,6 +24,7 @@
 		flex-direction: column;
 		height: 100%;
 		width: 100%;
+		padding: 5rem 0;
 		gap: 15rem;
 		&--projecting,
 		&--coding {
@@ -36,7 +40,6 @@
 		}
 		&--projecting {
 			height: 300px;
-			// margin-bottom: 10rem;
 		}
 		&--coding {
 			position: relative;
