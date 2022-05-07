@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .heading {
 	&__container {
 		display: flex;
@@ -9,8 +11,8 @@
 	}
 	&__text {
 		&__heading {
-			color: var(--fontColor);
-			font-size: var(--mediumText);
+			color: $fontColor;
+			font-size: $mediumText;
 		}
 	}
 	&__circle {
@@ -20,7 +22,7 @@
 		@include primaryGradient;
 	}
 	&__circle--blue {
-		background: var(--secondaryLight);
+		background: $secondaryLight;
 	}
 }
 
@@ -30,8 +32,8 @@
 	justify-content: center;
 	padding: 0.8rem 2rem;
 	font-weight: bold;
-	font-size: var(--smallText);
-	border-radius: var(--borderRadius);
+	font-size: $smallText;
+	border-radius: $borderRadius;
 	transition: background-color 0.2s ease;
 	cursor: pointer;
 	@include shadow;
@@ -47,8 +49,8 @@
 	display: flex;
 	// flex-direction: column;
 	// justify-content: flex-start;
-	padding: var(--smallPadding) var(--bigPadding);
-	border-radius: var(--borderRadius);
-	background-color: var(--coreAdditional);
+	padding: $smallPadding $bigPadding;
+	border-radius: $borderRadius;
+	background-color: $coreAdditional;
 	@include shadow;
 }

@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .about {
 	&__wrapper {
 		display: flex;
@@ -6,12 +8,12 @@
 		gap: 3rem;
 		min-height: 50vh;
 		width: 100%;
-		max-width: var(--maxWidth);
+		max-width: $maxWidth;
 		margin: 0 auto;
-		padding: var(--standardPadding);
+		padding: $standardPadding;
 
 		@media only screen and(min-width:1260px) {
-			padding: var(--standardPadding) 0;
+			padding: $standardPadding 0;
 		}
 	}
 
@@ -48,8 +50,8 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			width: 100%;
-			border-radius: var(--borderRadius);
-			background-color: var(--coreAdditional);
+			border-radius: $borderRadius;
+			background-color: $coreAdditional;
 			@include shadow;
 		}
 		&--avatar-box {
@@ -74,18 +76,18 @@
 		}
 
 		&--heading {
-			font-size: var(--mediumText);
-			color: var(--fontColor);
+			font-size: $mediumText;
+			color: $fontColor;
 		}
 
 		&--text {
-			color: var(--fontShade);
-			font-size: var(--verySmallText);
+			color: $fontShade;
+			font-size: $verySmallText;
 			// font-family: 'Lora', serif;
 			line-height: 150%;
 
 			@media only screen and(min-width:820px) {
-				font-size: var(--smallText);
+				font-size: $smallText;
 			}
 		}
 	}
@@ -97,13 +99,13 @@
 
 	&__button {
 		width: 100%;
-		background-color: var(--primaryColor);
-		color: var(--fontColor);
+		background-color: $primaryColor;
+		color: $fontColor;
 		align-self: flex-end;
 
 		&:hover {
-			background-color: var(--fontColor);
-			color: var(--primaryColor);
+			background-color: $fontColor;
+			color: $primaryColor;
 		}
 		&:hover i {
 			transform: translateX(100%);

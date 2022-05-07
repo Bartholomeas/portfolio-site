@@ -1,16 +1,15 @@
-@import './dark-theme';
-@import './variables';
-@import './animations';
-@import './universals';
-@import './nav';
-@import './landing';
-@import './about';
-@import './speciality';
-@import './assurance';
+@use './utilities/variables' as *;
+@use './utilities/dark-theme';
+@use './utilities/animations';
+@use './utilities/universals';
+@use './utilities/nav';
+@use './utilities/landing';
+@use './utilities/about';
+@use './utilities/speciality';
+@use './utilities/assurance';
 
-*,
-* ::after,
-* ::before {
+*::after,
+*::before {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -24,7 +23,7 @@ body {
 	// display: flex;
 	// flex-direction: column;
 	// gap: 15rem;
-	background-color: var(--core);
+	background-color: $core;
 	font-size: 1.6rem;
 }
 
