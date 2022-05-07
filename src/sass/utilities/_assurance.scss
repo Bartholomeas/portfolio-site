@@ -1,5 +1,7 @@
+@use './variables' as *;
+
 #assurance {
-	max-width: var(--maxWidth);
+	max-width: $maxWidth;
 	margin: 0 auto;
 }
 .assurance {
@@ -12,13 +14,13 @@
 		height: auto;
 		min-height: 100vh;
 		width: 100%;
-		max-width: var(--maxWidth);
+		max-width: $maxWidth;
 		margin: 0 auto;
-		padding: var(--standardPadding);
+		padding: $standardPadding;
 
 		@media only screen and(min-width:768px) {
 			flex-direction: row-reverse;
-			padding: var(--standardPadding) 0;
+			padding: $standardPadding 0;
 		}
 	}
 	&__background-image {
@@ -58,11 +60,11 @@
 		gap: 3rem;
 
 		&-heading {
-			font-size: var(--smallText);
+			font-size: $smallText;
 		}
 		&-text {
-			font-size: var(--verySmallText);
-			color: var(--fontShade);
+			font-size: $verySmallText;
+			color: $fontShade;
 		}
 	}
 

@@ -1,21 +1,23 @@
+@use './variables' as *;
+
 .speciality {
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		max-width: var(--maxWidth);
+		max-width: $maxWidth;
 		min-height: 100vh;
 		height: auto;
 		margin: 0 auto;
-		padding: 10rem var(--standardPadding);
+		padding: 10rem $standardPadding;
 		overflow-x: hidden;
 
 		@media only screen and(min-width:992px) {
 			overflow-x: hidden;
 		}
 		@media only screen and(min-width:1260px) {
-			padding: var(--standardPadding) 0;
+			padding: $standardPadding 0;
 		}
 	}
 
@@ -58,32 +60,32 @@
 		flex-direction: column;
 		width: 100%;
 		height: 100%;
-		padding: var(--bigPadding);
+		padding: $bigPadding;
 		align-self: flex-end;
 
 		@media only screen and(min-width:768px) {
 			width: 90%;
 		}
 		&--heading {
-			font-size: var(--smallerMediumText);
+			font-size: $smallerMediumText;
 			&-role {
-				color: var(--gray);
+				color: $gray;
 				font-weight: 400;
-				font-size: var(--smallText);
+				font-size: $smallText;
 				margin-bottom: 1rem;
 			}
 		}
 		&--text {
 			line-height: 150%;
-			font-size: var(--verySmallText);
-			color: var(--fontShade);
+			font-size: $verySmallText;
+			color: $fontShade;
 		}
 	}
 
 	&__avatar {
 		height: auto;
 		width: 15rem;
-		padding: var(--standardPadding) 0;
+		padding: $standardPadding 0;
 
 		&--projecting,
 		&--coding {
@@ -118,7 +120,7 @@
 
 			&-projecting {
 				position: relative;
-				background-color: var(--primaryColor);
+				background-color: $primaryColor;
 				margin-top: 5rem;
 			}
 			&-coding {
@@ -126,7 +128,7 @@
 				top: -14rem;
 				right: 10%;
 				z-index: -1;
-				background-color: var(--secondaryColor);
+				background-color: $secondaryColor;
 			}
 		}
 	}
