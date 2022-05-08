@@ -1,18 +1,20 @@
+<<<<<<< HEAD:src/sass/utilities/_assurance.scss
 @use './variables' as *;
 
 #assurance {
 	max-width: $maxWidth;
 	margin: 0 auto;
 }
+=======
+>>>>>>> adba75a (recommited use and forwards to imports (use and forwards was so unclean to use)):src/sass/_assurance.scss
 .assurance {
 	&__wrapper {
+		background-color: rgba(0, 0, 0, 0.06);
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: flex-start;
+		// flex-direction: column;
 		height: 100vh;
 		height: auto;
-		min-height: 100vh;
 		width: 100%;
 		max-width: $maxWidth;
 		margin: 0 auto;
@@ -24,11 +26,37 @@
 		}
 	}
 	&__background-image {
-		display: block;
-		margin: auto;
+		// height: 100%;
 		width: 100%;
+		background-size: cover;
 		object-fit: cover;
-		z-index: -100;
+	}
+	&__line {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		width: 0.8rem;
+		padding: 3rem 0;
+		border-radius: var(--borderRadius);
+
+		background-color: var(--fontColor);
+		@include shadow;
+	}
+	&__circle-box {
+		position: relative;
+		width: 3rem;
+		height: 3rem;
+		background-color: var(--secondaryColor);
+		border-radius: 50%;
+		@include shadow;
+
+		@media only screen and(min-width:768px) {
+			&:nth-child(2n) {
+				transform: translateX(100px);
+			}
+		}
 	}
 
 	&__items-container {
@@ -40,11 +68,9 @@
 		min-width: 60%;
 		gap: 3rem;
 		align-items: center;
-		margin-bottom: 5rem;
 
 		@media only screen and(min-width:768px) {
 			flex-direction: row;
-			margin-bottom: 0;
 		}
 	}
 	&__items--box {
@@ -58,10 +84,13 @@
 		justify-content: center;
 		max-width: 350px;
 		gap: 3rem;
+<<<<<<< HEAD:src/sass/utilities/_assurance.scss
 
 		&-heading {
 			font-size: $smallText;
 		}
+=======
+>>>>>>> adba75a (recommited use and forwards to imports (use and forwards was so unclean to use)):src/sass/_assurance.scss
 		&-text {
 			font-size: $verySmallText;
 			color: $fontShade;
@@ -74,26 +103,18 @@
 	}
 
 	&__icon {
+		height: 50px;
 		width: auto;
-		height: 35px;
-		@media only screen and(min-width:992px) {
-			height: 50px;
-		}
 
 		&-bg {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 60px;
-			width: 60px;
+			height: 90px;
+			width: 90px;
 			aspect-ratio: 1 / 1;
 			border-radius: 50%;
 			@include primaryGradient;
-
-			@media only screen and(min-width:992px) {
-				height: 90px;
-				width: 90px;
-			}
 		}
 	}
 }
