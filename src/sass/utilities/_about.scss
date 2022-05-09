@@ -11,7 +11,6 @@
 		max-width: $maxWidth;
 		margin: 0 auto;
 		padding: $standardPadding;
-
 		@media only screen and(min-width:1260px) {
 			padding: $standardPadding 0;
 		}

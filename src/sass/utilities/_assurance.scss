@@ -1,12 +1,10 @@
-<<<<<<< HEAD:src/sass/utilities/_assurance.scss
 @use './variables' as *;
 
 #assurance {
 	max-width: $maxWidth;
 	margin: 0 auto;
 }
-=======
->>>>>>> adba75a (recommited use and forwards to imports (use and forwards was so unclean to use)):src/sass/_assurance.scss
+
 .assurance {
 	&__wrapper {
 		background-color: rgba(0, 0, 0, 0.06);
@@ -84,17 +82,12 @@
 		justify-content: center;
 		max-width: 350px;
 		gap: 3rem;
-<<<<<<< HEAD:src/sass/utilities/_assurance.scss
+		font-size: $smallText;
+	}
 
-		&-heading {
-			font-size: $smallText;
-		}
-=======
->>>>>>> adba75a (recommited use and forwards to imports (use and forwards was so unclean to use)):src/sass/_assurance.scss
-		&-text {
-			font-size: $verySmallText;
-			color: $fontShade;
-		}
+	&-text {
+		font-size: $verySmallText;
+		color: $fontShade;
 	}
 
 	&__text-container {
