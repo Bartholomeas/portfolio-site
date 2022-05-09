@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/sass/utilities/_assurance.scss
 @use './variables' as *;
 
 #assurance {
@@ -6,8 +5,6 @@
 	margin: 0 auto;
 }
 
-=======
->>>>>>> parent of 3d388d4 (visual fixes):src/sass/_assurance.scss
 .assurance {
 	&__wrapper {
 		background-color: rgba(0, 0, 0, 0.06);
@@ -85,19 +82,12 @@
 		justify-content: center;
 		max-width: 350px;
 		gap: 3rem;
-<<<<<<< HEAD:src/sass/utilities/_assurance.scss
 		font-size: $smallText;
 	}
 
 	&-text {
 		font-size: $verySmallText;
 		color: $fontShade;
-=======
-		&-text {
-			font-size: var(--verySmallText);
-			color: var(--fontShade);
-		}
->>>>>>> parent of 3d388d4 (visual fixes):src/sass/_assurance.scss
 	}
 
 	&__text-container {
