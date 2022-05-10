@@ -3,8 +3,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		gap: 3rem;
-		min-height: 70vh;
+		min-height: 100vh;
+		// background-color: pink;
 		width: 100%;
 		max-width: var(--maxWidth);
 		margin: 0 auto;
@@ -13,17 +15,22 @@
 		@media only screen and(min-width:1260px) {
 			padding: var(--standardPadding) 0;
 		}
+		@media only screen and(min-width:768px) {
+			min-height: 60vh;
+		}
 	}
 
 	&__right--container {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		gap: 2rem;
-		width: 100%;
 		height: auto;
+		width: 100%;
 		@media only screen and(min-width:768px) {
-			width: 60%;
 			height: 300px;
+			transform: translateX(-20%);
 		}
 	}
 
@@ -39,8 +46,9 @@
 
 			@media only screen and(min-width:768px) {
 				flex-direction: row;
-				align-items: flex-start;
+				align-items: center;
 				max-height: 300px;
+				gap: 0rem;
 			}
 		}
 		&--avatar-box,
@@ -48,7 +56,6 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			width: 100%;
-			border-radius: var(--borderRadius);
 			background-color: var(--coreAdditional);
 			@include shadow;
 		}
@@ -57,19 +64,27 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			height: 300px;
+			width: 100%;
+			height: 100%;
+			max-width: 350px;
+			max-height: 350px;
+			padding: 0;
+			border-radius: 100%;
+			aspect-ratio: 1 / 1;
+			background-color: var(--fontColor);
+			background-image: url('../../dist/img/logoBlue.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: 100;
 			overflow: hidden;
-
-			@media only screen and(min-width:768px) {
-				width: 40%;
-			}
 		}
 		&--content-box {
-			position: relative;
+			border-radius: var(--borderRadius);
+			z-index: -100;
 
 			@media only screen and(min-width:768px) {
 				width: 100%;
-				height: 80%;
+				padding-left: 25%;
 			}
 		}
 
@@ -94,13 +109,6 @@
 		height: 100%;
 		bottom: 0;
 	}
-	&__logo-icon {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		fill: var(--fontShade);
-		background-color: pink;
-	}
 
 	&__button {
 		width: 100%;
@@ -114,6 +122,9 @@
 		}
 		&:hover i {
 			transform: translateX(100%);
+		}
+
+		@media only screen and (min-width: 768px) {
 		}
 	}
 }
