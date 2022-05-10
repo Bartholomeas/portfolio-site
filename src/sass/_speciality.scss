@@ -8,11 +8,11 @@
 		min-height: 100vh;
 		height: auto;
 		margin: 0 auto;
-		padding: 10rem var(--standardPadding);
+		padding: var(--standardPadding);
 		overflow-x: hidden;
 
 		@media only screen and(min-width:992px) {
-			overflow-x: hidden;
+			overflow-x: none;
 		}
 		@media only screen and(min-width:1260px) {
 			padding: var(--standardPadding) 0;

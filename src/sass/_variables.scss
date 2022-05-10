@@ -17,8 +17,8 @@
 
 	--hover: #d1e1e4;
 
-	--fontColor: #2d2d2d;
-	--fontShade: #6d6d6d;
+	--fontColor: #082535;
+	--fontShade: #0b3044;
 
 	// text
 	--verySmallText: 1.4rem;
@@ -34,14 +34,14 @@
 	--bigPadding: 3.2rem;
 
 	--maxWidth: 1200px;
-	--borderRadius: 16px;
+	--borderRadius: 8px;
 }
 
 @mixin primaryGradient {
 	background: linear-gradient(180deg, #fedf78 0%, #f4bf09 68.51%);
 }
 @mixin shadow {
-	box-shadow: 0px 16px 40px 4px rgba(73, 100, 126, 0.2);
+	box-shadow: 0px 16px 35px 4px rgba(20, 41, 60, 0.2);
 	// border-radius: 16px;
 	// background: #e0e0e0;
 	// box-shadow: 20px 20px 40px #bebebe, -20px -20px 40px #ffffff;
