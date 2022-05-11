@@ -6,7 +6,6 @@
 		justify-content: center;
 		gap: 3rem;
 		min-height: 100vh;
-		// background-color: pink;
 		width: 100%;
 		max-width: var(--maxWidth);
 		margin: 0 auto;
@@ -28,12 +27,17 @@
 		gap: 2rem;
 		height: auto;
 		width: 100%;
+
+		background: none;
 		@media only screen and(min-width:768px) {
 			height: 300px;
-			transform: translateX(-20%);
+			// transform: translateX(-10%);
 		}
 	}
 
+	&__content-wrapper {
+		background-color: pink;
+	}
 	&__info {
 		&-container {
 			display: flex;
@@ -56,8 +60,6 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			width: 100%;
-			background-color: var(--coreAdditional);
-			@include shadow;
 		}
 		&--avatar-box {
 			position: relative;
@@ -77,14 +79,17 @@
 			background-size: cover;
 			z-index: 100;
 			overflow: hidden;
+			@include shadow;
 		}
 		&--content-box {
+			position: relative;
 			border-radius: var(--borderRadius);
-			z-index: -100;
-
-			@media only screen and(min-width:768px) {
+			background-color: var(--coreAdditional);
+			padding: var(--bigPadding);
+			@include shadow;
+			@media only screen and(min-width: 768px) {
 				width: 100%;
-				padding-left: 25%;
+				// padding-left: 25%;
 			}
 		}
 
@@ -96,11 +101,10 @@
 		&--text {
 			color: var(--fontShade);
 			font-size: var(--verySmallText);
-			// font-family: 'Lora', serif;
 			line-height: 150%;
 
 			@media only screen and(min-width:820px) {
-				font-size: var(--smallText);
+				// font-size: var(--smallText);
 			}
 		}
 	}
