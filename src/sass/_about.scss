@@ -27,31 +27,31 @@
 		gap: 2rem;
 		height: auto;
 		width: 100%;
-
 		background: none;
+
 		@media only screen and(min-width:768px) {
 			height: 300px;
-			// transform: translateX(-10%);
+			padding-left: 25%;
+		}
+		@media only screen and(min-width:1000px) {
+			padding-left: 20%;
 		}
 	}
 
-	&__content-wrapper {
-		background-color: pink;
-	}
 	&__info {
 		&-container {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			gap: 2rem;
 			width: 100%;
-			height: auto;
+			// height: auto;
 
 			@media only screen and(min-width:768px) {
 				flex-direction: row;
 				align-items: center;
-				max-height: 300px;
 				gap: 0rem;
 			}
 		}
@@ -66,8 +66,6 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 100%;
-			height: 100%;
 			max-width: 350px;
 			max-height: 350px;
 			padding: 0;
@@ -80,19 +78,33 @@
 			z-index: 100;
 			overflow: hidden;
 			@include shadow;
+
+			@media only screen and(min-width:768px) {
+				position: absolute;
+				left: 0;
+			}
 		}
 		&--content-box {
 			position: relative;
 			border-radius: var(--borderRadius);
 			background-color: var(--coreAdditional);
-			padding: var(--bigPadding);
+			padding: var(--standardPadding) var(--bigPadding);
 			@include shadow;
 			@media only screen and(min-width: 768px) {
 				width: 100%;
-				// padding-left: 25%;
+				height: 100%;
+				padding-left: 35%;
+			}
+			@media only screen and(min-width: 900px) {
+				padding-left: 15rem;
+			}
+			@media only screen and(min-width: 1000px) {
+				padding-left: 17rem;
 			}
 		}
-
+		.box {
+			background-color: pink;
+		}
 		&--heading {
 			font-size: var(--mediumText);
 			color: var(--fontColor);
