@@ -65,9 +65,12 @@
 			width: 90%;
 		}
 		&--heading {
+			color: var(--fontColor);
 			font-size: var(--smallerMediumText);
 			&-role {
 				color: var(--gray);
+				color: var(--secondaryColor);
+
 				font-weight: 400;
 				font-size: var(--smallText);
 				margin-bottom: 1rem;
