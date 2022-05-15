@@ -18,7 +18,7 @@
 		display: flex;
 		flex-direction: column;
 		// align-items: center;
-		gap: 10rem;
+		gap: 15rem;
 		width: 100%;
 		height: 100%;
 
@@ -38,7 +38,7 @@
 			justify-content: flex-end;
 		}
 		@media only screen and(min-width:992px) {
-			width: 80%;
+			width: 70%;
 		}
 
 		&--item {
@@ -62,12 +62,13 @@
 			position: relative;
 			display: flex;
 			flex-direction: column;
-			align-items: center;
 			justify-content: space-around;
+			align-items: center;
 			width: 100%;
-			height: 300px;
-			padding: var(--standardPadding);
+			height: 320px;
+			padding: var(--bigPadding) var(--standardPadding);
 			border-radius: var(--borderRadius);
+			background-color: var(--secondaryLight);
 			background-color: var(--secondaryLight);
 			color: var(--fontColor);
 			z-index: 10000;
@@ -75,9 +76,10 @@
 				height: 80%;
 				width: 35%;
 				align-self: flex-end;
+				align-items: flex-end;
 			}
 			@media only screen and(min-width:992px) {
-				width: 20%;
+				width: 30%;
 			}
 			&::before {
 				content: '';
@@ -90,24 +92,40 @@
 				border-radius: 50%;
 				aspect-ratio: 1 / 1;
 				background-color: var(--secondaryLight);
+				background-image: url('../../dist/img/logoBlue.svg');
+				background-size: cover;
+				background-size: 80%;
+				background-repeat: no-repeat;
+				background-position: center;
 				z-index: -1;
 			}
 
 			.socials {
+				&__header {
+					font-size: var(--mediumText);
+					text-align: right;
+					margin: 2rem 0;
+				}
+
 				&__item-container {
 					display: flex;
 					flex-direction: column;
 					gap: 2rem;
+					width: 80%;
 				}
 				&__item {
 					display: flex;
+					flex-direction: row;
 					align-items: center;
+					align-items: flex-end;
 					gap: 0.8rem;
 					cursor: pointer;
 					font-weight: 700;
 					color: var(--fontShade);
 					transition: transform 0.2s ease;
-
+					@media only screen and(min-width:768px) {
+						flex-direction: row-reverse;
+					}
 					&:hover {
 						transform: scale(1.02);
 					}
@@ -125,7 +143,7 @@
 					position: absolute;
 					width: 200px;
 					top: 0;
-					right: 1rem;
+					right: 0;
 					transform: scaleX(-1) translateY(calc(-100% + 3px));
 					z-index: -10000;
 				}
