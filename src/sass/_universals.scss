@@ -21,9 +21,6 @@
 		aspect-ratio: 1 / 1;
 		@include primaryGradient;
 	}
-	&__circle--blue {
-		background: var(--secondaryLight);
-	}
 }
 
 .button__primary {
@@ -36,7 +33,6 @@
 	border-radius: var(--borderRadius);
 	transition: background-color 0.2s ease;
 	cursor: pointer;
-	@include shadow;
 }
 
 .button__icon {

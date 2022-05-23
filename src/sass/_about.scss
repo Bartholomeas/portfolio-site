@@ -128,19 +128,16 @@
 
 	&__button {
 		width: 100%;
-		background-color: var(--primaryColor);
+		background-color: var(--grayAccent);
 		color: var(--fontColor);
 		align-self: flex-end;
 
 		&:hover {
-			background-color: var(--fontColor);
-			color: var(--primaryColor);
+			color: var(--fontColor);
+			background-color: var(--primaryColor);
 		}
 		&:hover i {
 			transform: translateX(100%);
-		}
-
-		@media only screen and (min-width: 768px) {
 		}
 	}
 }

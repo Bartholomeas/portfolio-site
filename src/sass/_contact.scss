@@ -47,7 +47,7 @@
 
 			.form__input {
 				width: 100%;
-				border: 2px solid var(--lightGray);
+				border: 2px solid var(--grayAccent);
 				border-radius: var(--borderRadius);
 				padding: 0.8rem 1rem;
 			}
@@ -68,8 +68,7 @@
 			height: 320px;
 			padding: var(--bigPadding) var(--standardPadding);
 			border-radius: var(--borderRadius);
-			background-color: var(--secondaryLight);
-			background-color: var(--secondaryLight);
+			background-color: var(--grayAccent);
 			color: var(--fontColor);
 			z-index: 10000;
 			@media only screen and(min-width:768px) {
@@ -91,7 +90,7 @@
 				transform: translate(-50%, -50%);
 				border-radius: 50%;
 				aspect-ratio: 1 / 1;
-				background-color: var(--secondaryLight);
+				background-color: var(--grayAccent);
 				background-image: url('../../dist/img/logoBlue.svg');
 				background-size: cover;
 				background-size: 80%;
@@ -120,7 +119,7 @@
 					align-items: flex-end;
 					gap: 0.8rem;
 					cursor: pointer;
-					font-weight: 700;
+					font-weight: 400;
 					color: var(--fontShade);
 					transition: transform 0.2s ease;
 					@media only screen and(min-width:768px) {

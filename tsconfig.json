@@ -1,9 +1,0 @@
-{
-	"files": ["src/js/main.js"],
-	"compilerOptions": {
-		"rootDir": "./src/js",
-		"outDir": "./dist/js",
-		"target": "ES2015",
-		"module": "ES2015"
-	}
-}
