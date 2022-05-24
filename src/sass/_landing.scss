@@ -1,6 +1,3 @@
-@use './variables' as *;
-
-
 .landing {
 	&__wrapper {
 		// height: 90vh;
@@ -78,7 +75,7 @@
 		transform: translateX(-50%) translateY(-5rem);
 		height: 250px;
 		width: 250px;
-		border: 1rem solid $white;
+		border: 1rem solid var(--white);
 		@include primaryGradient;
 		@include shadow;
 
@@ -92,8 +89,8 @@
 			bottom: -5rem;
 			left: 50%;
 			transform: translateX(-50%);
-			font-size: $mediumText;
-			color: $fontColor;
+			font-size: var(--mediumText);
+			color: var(--fontColor);
 			font-weight: 700;
 		}
 	}

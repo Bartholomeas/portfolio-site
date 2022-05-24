@@ -1,5 +1,3 @@
-@use './variables' as *;
-
 .about {
 	&__wrapper {
 		display: flex;
@@ -9,11 +7,12 @@
 		gap: 3rem;
 		min-height: 100vh;
 		width: 100%;
-		max-width: $maxWidth;
+		max-width: var(--maxWidth);
 		margin: 0 auto;
-		padding: $standardPadding;
+		padding: var(--standardPadding);
+
 		@media only screen and(min-width:1260px) {
-			padding: $standardPadding 0;
+			padding: var(--standardPadding) 0;
 		}
 		@media only screen and(min-width:768px) {
 			min-height: 60vh;
@@ -61,12 +60,6 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			width: 100%;
-<<<<<<< HEAD:src/sass/utilities/_about.scss
-			border-radius: $borderRadius;
-			background-color: $coreAdditional;
-			@include shadow;
-=======
->>>>>>> main-imports:src/sass/_about.scss
 		}
 		&--avatar-box {
 			position: relative;
@@ -113,27 +106,17 @@
 			background-color: pink;
 		}
 		&--heading {
-			font-size: $mediumText;
-			color: $fontColor;
+			font-size: var(--mediumText);
+			color: var(--fontColor);
 		}
 
 		&--text {
-<<<<<<< HEAD:src/sass/utilities/_about.scss
-			color: $fontShade;
-			font-size: $verySmallText;
-			// font-family: 'Lora', serif;
-			line-height: 150%;
-
-			@media only screen and(min-width:820px) {
-				font-size: $smallText;
-=======
 			color: var(--fontShade);
 			font-size: var(--verySmallText);
 			line-height: 150%;
 
 			@media only screen and(min-width:820px) {
 				// font-size: var(--smallText);
->>>>>>> main-imports:src/sass/_about.scss
 			}
 		}
 	}
@@ -145,15 +128,6 @@
 
 	&__button {
 		width: 100%;
-<<<<<<< HEAD:src/sass/utilities/_about.scss
-		background-color: $primaryColor;
-		color: $fontColor;
-		align-self: flex-end;
-
-		&:hover {
-			background-color: $fontColor;
-			color: $primaryColor;
-=======
 		background-color: var(--grayAccent);
 		color: var(--fontColor);
 		align-self: flex-end;
@@ -161,7 +135,6 @@
 		&:hover {
 			color: var(--fontColor);
 			background-color: var(--primaryColor);
->>>>>>> main-imports:src/sass/_about.scss
 		}
 		&:hover i {
 			transform: translateX(100%);

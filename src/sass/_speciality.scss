@@ -1,27 +1,21 @@
-@use './variables' as *;
-
 .speciality {
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		max-width: $maxWidth;
+		max-width: var(--maxWidth);
 		min-height: 100vh;
 		height: auto;
 		margin: 0 auto;
-<<<<<<< HEAD:src/sass/utilities/_speciality.scss
-		padding: 10rem $standardPadding;
-=======
 		padding: var(--standardPadding);
->>>>>>> main-imports:src/sass/_speciality.scss
 		overflow-x: hidden;
 
 		@media only screen and(min-width:992px) {
 			overflow-x: none;
 		}
 		@media only screen and(min-width:1260px) {
-			padding: $standardPadding 0;
+			padding: var(--standardPadding) 0;
 		}
 	}
 
@@ -64,41 +58,35 @@
 		flex-direction: column;
 		width: 100%;
 		height: 100%;
-		padding: $bigPadding;
+		padding: var(--bigPadding);
 		align-self: flex-end;
 
 		@media only screen and(min-width:768px) {
 			width: 90%;
 		}
 		&--heading {
-<<<<<<< HEAD:src/sass/utilities/_speciality.scss
-			font-size: $smallerMediumText;
-			&-role {
-				color: $gray;
-=======
 			color: var(--fontColor);
 			font-size: var(--smallerMediumText);
 			&-role {
 				color: var(--gray);
 				color: var(--secondaryColor);
 
->>>>>>> main-imports:src/sass/_speciality.scss
 				font-weight: 400;
-				font-size: $smallText;
+				font-size: var(--smallText);
 				margin-bottom: 1rem;
 			}
 		}
 		&--text {
 			line-height: 150%;
-			font-size: $verySmallText;
-			color: $fontShade;
+			font-size: var(--verySmallText);
+			color: var(--fontShade);
 		}
 	}
 
 	&__avatar {
 		height: auto;
 		width: 15rem;
-		padding: $standardPadding 0;
+		padding: var(--standardPadding) 0;
 
 		&--projecting,
 		&--coding {
@@ -133,7 +121,7 @@
 
 			&-projecting {
 				position: relative;
-				background-color: $primaryColor;
+				background-color: var(--primaryColor);
 				margin-top: 5rem;
 			}
 			&-coding {
@@ -141,7 +129,7 @@
 				top: -14rem;
 				right: 10%;
 				z-index: -1;
-				background-color: $secondaryColor;
+				background-color: var(--secondaryColor);
 			}
 		}
 	}
