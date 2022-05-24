@@ -5,8 +5,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		gap: 3rem;
-		min-height: 50vh;
+		min-height: 100vh;
 		width: 100%;
 		max-width: $maxWidth;
 		margin: 0 auto;
@@ -14,34 +15,45 @@
 		@media only screen and(min-width:1260px) {
 			padding: $standardPadding 0;
 		}
+		@media only screen and(min-width:768px) {
+			min-height: 60vh;
+		}
 	}
 
 	&__right--container {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		gap: 2rem;
-		width: 100%;
 		height: auto;
+		width: 100%;
+		background: none;
+
 		@media only screen and(min-width:768px) {
-			width: 60%;
 			height: 300px;
+			padding-left: 25%;
+		}
+		@media only screen and(min-width:1000px) {
+			padding-left: 20%;
 		}
 	}
 
 	&__info {
 		&-container {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			gap: 2rem;
 			width: 100%;
-			height: auto;
+			// height: auto;
 
 			@media only screen and(min-width:768px) {
 				flex-direction: row;
-				align-items: flex-start;
-				max-height: 300px;
+				align-items: center;
+				gap: 0rem;
 			}
 		}
 		&--avatar-box,
@@ -49,37 +61,64 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			width: 100%;
+<<<<<<< HEAD:src/sass/utilities/_about.scss
 			border-radius: $borderRadius;
 			background-color: $coreAdditional;
 			@include shadow;
+=======
+>>>>>>> main-imports:src/sass/_about.scss
 		}
 		&--avatar-box {
 			position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			height: 300px;
+			max-width: 350px;
+			max-height: 350px;
+			padding: 0;
+			border-radius: 100%;
+			aspect-ratio: 1 / 1;
+			background-color: var(--fontColor);
+			background-image: url('../../dist/img/logoBlue.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: 100;
 			overflow: hidden;
+			@include shadow;
 
 			@media only screen and(min-width:768px) {
-				width: 40%;
+				position: absolute;
+				left: 0;
 			}
 		}
 		&--content-box {
 			position: relative;
-
-			@media only screen and(min-width:768px) {
+			border-radius: var(--borderRadius);
+			background-color: var(--coreAdditional);
+			padding: var(--standardPadding) var(--bigPadding);
+			@include shadow;
+			@media only screen and(min-width: 768px) {
 				width: 100%;
-				height: 80%;
+				height: 100%;
+				padding-left: 35%;
+			}
+			@media only screen and(min-width: 900px) {
+				padding-left: 15rem;
+			}
+			@media only screen and(min-width: 1000px) {
+				padding-left: 17rem;
 			}
 		}
-
+		.box {
+			background-color: pink;
+		}
 		&--heading {
 			font-size: $mediumText;
 			color: $fontColor;
 		}
 
 		&--text {
+<<<<<<< HEAD:src/sass/utilities/_about.scss
 			color: $fontShade;
 			font-size: $verySmallText;
 			// font-family: 'Lora', serif;
@@ -87,6 +126,14 @@
 
 			@media only screen and(min-width:820px) {
 				font-size: $smallText;
+=======
+			color: var(--fontShade);
+			font-size: var(--verySmallText);
+			line-height: 150%;
+
+			@media only screen and(min-width:820px) {
+				// font-size: var(--smallText);
+>>>>>>> main-imports:src/sass/_about.scss
 			}
 		}
 	}
@@ -98,6 +145,7 @@
 
 	&__button {
 		width: 100%;
+<<<<<<< HEAD:src/sass/utilities/_about.scss
 		background-color: $primaryColor;
 		color: $fontColor;
 		align-self: flex-end;
@@ -105,6 +153,15 @@
 		&:hover {
 			background-color: $fontColor;
 			color: $primaryColor;
+=======
+		background-color: var(--grayAccent);
+		color: var(--fontColor);
+		align-self: flex-end;
+
+		&:hover {
+			color: var(--fontColor);
+			background-color: var(--primaryColor);
+>>>>>>> main-imports:src/sass/_about.scss
 		}
 		&:hover i {
 			transform: translateX(100%);

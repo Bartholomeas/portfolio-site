@@ -10,11 +10,15 @@
 		min-height: 100vh;
 		height: auto;
 		margin: 0 auto;
+<<<<<<< HEAD:src/sass/utilities/_speciality.scss
 		padding: 10rem $standardPadding;
+=======
+		padding: var(--standardPadding);
+>>>>>>> main-imports:src/sass/_speciality.scss
 		overflow-x: hidden;
 
 		@media only screen and(min-width:992px) {
-			overflow-x: hidden;
+			overflow-x: none;
 		}
 		@media only screen and(min-width:1260px) {
 			padding: $standardPadding 0;
@@ -67,9 +71,18 @@
 			width: 90%;
 		}
 		&--heading {
+<<<<<<< HEAD:src/sass/utilities/_speciality.scss
 			font-size: $smallerMediumText;
 			&-role {
 				color: $gray;
+=======
+			color: var(--fontColor);
+			font-size: var(--smallerMediumText);
+			&-role {
+				color: var(--gray);
+				color: var(--secondaryColor);
+
+>>>>>>> main-imports:src/sass/_speciality.scss
 				font-weight: 400;
 				font-size: $smallText;
 				margin-bottom: 1rem;

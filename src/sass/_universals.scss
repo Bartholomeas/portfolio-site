@@ -1,0 +1,52 @@
+.heading {
+	&__container {
+		display: flex;
+		align-items: center;
+		align-self: flex-start;
+		gap: 2rem;
+		padding: 4rem 0;
+		width: 100%;
+		color: var(--fontColor);
+	}
+	&__text {
+		&__heading {
+			color: var(--fontColor);
+			font-size: var(--mediumText);
+		}
+	}
+	&__circle {
+		height: 3rem;
+		width: 3rem;
+		border-radius: 50%;
+		aspect-ratio: 1 / 1;
+		@include primaryGradient;
+	}
+}
+
+.button__primary {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.8rem 2rem;
+	font-weight: bold;
+	font-size: var(--smallText);
+	border-radius: var(--borderRadius);
+	transition: background-color 0.2s ease;
+	cursor: pointer;
+}
+
+.button__icon {
+	font-size: 2rem;
+	padding-left: 1rem;
+	transition: transform 0.2s ease;
+}
+
+.standard-box {
+	display: flex;
+	// flex-direction: column;
+	// justify-content: flex-start;
+	padding: var(--bigPadding);
+	border-radius: var(--borderRadius);
+	background-color: var(--coreAdditional);
+	@include shadow;
+}

@@ -1,0 +1,16 @@
+.footer {
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		@include innerShadow;
+		height: 4rem;
+	}
+
+	&__header {
+		font-weight: 400;
+		font-size: var(--verySmallText);
+		color: var(--fontShade);
+	}
+}

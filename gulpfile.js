@@ -12,8 +12,8 @@ const kit = require('gulp-kit');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
-const ts = require('gulp-typescript');
-const tsProject = ts.createProject('tsconfig.json');
+// const ts = require('gulp-typescript');
+// const tsProject = ts.createProject('tsconfig.json');
 
 const paths = {
 	html: './html/**/*.kit',
@@ -27,17 +27,17 @@ const paths = {
 };
 
 // build js i ts
-function buildScripts(done) {
-	tsProject
-		.src()
-		.pipe(tsProject())
-		.pipe(babel({ presets: ['@babel/env'] }))
-		.pipe(uglify())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(sourcemaps.write())
-		.pipe(dest(paths.jsDest));
-	done();
-}
+// function buildScripts(done) {
+// 	tsProject
+// 		.src()
+// 		.pipe(tsProject())
+// 		.pipe(babel({ presets: ['@babel/env'] }))
+// 		.pipe(uglify())
+// 		.pipe(rename({ suffix: '.min' }))
+// 		.pipe(sourcemaps.write())
+// 		.pipe(dest(paths.jsDest));
+// 	done();
+// }
 
 function sassCompiler(done) {
 	src(paths.sass)
@@ -89,11 +89,11 @@ function startBrowserSync(done) {
 
 function watchForChanges(done) {
 	watch('./*.html').on('change', reload);
-	watch([paths.html, paths.sass, paths.js], parallel(handleKits, sassCompiler, buildScripts)).on('change', reload);
+	watch([paths.html, paths.sass, paths.js], parallel(handleKits, sassCompiler, javaScript)).on('change', reload);
 	watch(paths.img, convertImages).on('change', reload);
 	done();
 }
 
-const mainFunctions = parallel(handleKits, sassCompiler, buildScripts, convertImages);
+const mainFunctions = parallel(handleKits, sassCompiler, javaScript, convertImages);
 exports.cleanStuff = cleanStuff;
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges);
