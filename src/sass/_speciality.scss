@@ -1,4 +1,11 @@
 .speciality {
+	&__background-color {
+		background-color: var(--grayAccent);
+		z-index: -10000;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
@@ -9,6 +16,7 @@
 		height: auto;
 		margin: 0 auto;
 		padding: var(--standardPadding);
+
 		overflow-x: hidden;
 
 		@media only screen and(min-width:992px) {
