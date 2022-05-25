@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@400;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/dd95eb7a0b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../dist/css/main.min.css">
 </head>
 
@@ -55,14 +56,14 @@
                 <div class="landing__avatar">
                     <img src="../dist/img/faceProfile.png" alt="Avatar przypominający mnie"
                         class="landing__avatar-image">
-                    <p class="landing__avatar-name">Bartholomeas</p>
+                    <p class="landing__avatar-name">(to ja)</p>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="section__padding">
         <div class="about__wrapper">
 
             <div class="heading__container">
@@ -71,15 +72,15 @@
             </div>
 
             <div class="about__info-container">
-                <div class="standard-box about__info--avatar-box">
+                <div data-aos="zoom-out-up" data-aos-anchor-placement="center-bottom"
+                    class="standard-box about__info--avatar-box">
                     <img class="about__avatar" src="../dist/img/faceHand.png"
                         alt="Machająca postać przedstawiająca mnie">
 
                 </div>
 
                 <div class="about__right--container">
-                    <div class="box"></div>
-                    <div class="about__info--content-box">
+                    <div class="about__info--content-box" data-aos="fade-right" data-aos-delay="150">
                         <h3 class="about__info--heading">Cześć!</h3>
                         <p class="about__info--text"> Nazywam się Bartosz i skoro to czytasz to chcesz
                             się dowiedzieć o
@@ -105,7 +106,6 @@
 
     <!-- specjalność -->
     <section id="speciality" class="section__padding">
-        <span class="speciality__background-color"></span>
         <div class="speciality__wrapper">
             <div class="heading__container">
                 <span class="heading__circle"></span>
@@ -134,18 +134,14 @@
                         <img class="speciality__ornament ornament__spring--light-yellow"
                             src="../dist/img/bgYellowSpring.svg" alt="">
                     </div>
-                    <div class="speciality__avatar--box speciality__avatar--box-projecting">
+                    <div data-aos="zoom-out-up" class="speciality__avatar--box speciality__avatar--box-projecting">
                         <img class="speciality__avatar  speciality__avatar--projecting" src="../dist/img/faceBulb.png"
                             alt="Postać przedstawiająca mnie z żarówką nad głową">
                     </div>
                 </div>
-
                 <!-- KODING -->
                 <div class="speciality__container--coding">
-
-
-                    <div class="speciality__avatar--box speciality__avatar--box-coding">
-
+                    <div data-aos="zoom-out-up" class="speciality__avatar--box speciality__avatar--box-coding">
                         <img class="speciality__avatar speciality__avatar--coding" src="../dist/img/faceMB.png"
                             alt="Postać przedstawiająca mnie z żarówką nad głową">
                     </div>
@@ -257,7 +253,8 @@
                 </div>
 
             </div>
-            <img src="../dist/img/laptop_big.png" class="assurance__background-image" />
+            <img data-aos="zoom-out-right" data-aos-anchor-placement="center-bottom" src="../dist/img/laptop_big.png"
+                class="assurance__background-image" alt="Macbook z edytorem kodu na ekranie" />
 
         </div>
     </section>
@@ -331,7 +328,8 @@
                         <label for="message-input" class="form__label">Wiadomość</label>
                         <textarea type="text" id="message-input" name="message-input" class="form__input"></textarea>
                     </div>
-                    <button type="submit" class="button__primary about__button contact__button">Wyślij wiadomość <i
+                    <button type="submit" class="button__primary about__button contact__button"
+                        style="z-index:10000;">Wyślij wiadomość <i
                             class="button__icon fa-solid fa-circle-right"></i></button>
                 </form>
 
@@ -377,8 +375,11 @@
 </div>
 
 
-
     <script type="module" src="../dist/js/main.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
