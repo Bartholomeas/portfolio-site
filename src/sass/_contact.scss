@@ -11,7 +11,7 @@
 		@media only screen and(min-width:768px) {
 			min-height: initial;
 			height: 600px;
-			padding: var(--bigPadding) var(--standardPadding);
+			padding: var(--standardPadding) var(--bigPadding);
 		}
 	}
 	&__container {
@@ -51,6 +51,9 @@
 				border-radius: var(--borderRadius);
 				padding: 0.8rem 1rem;
 			}
+		}
+		&--label {
+			color: var(--fontColor);
 		}
 	}
 

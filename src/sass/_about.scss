@@ -126,13 +126,13 @@
 
 	&__button {
 		width: 100%;
-		background-color: var(--grayAccent);
 		color: var(--fontColor);
+		background-color: var(--primaryColor);
 		align-self: flex-end;
 
 		&:hover {
 			color: var(--fontColor);
-			background-color: var(--primaryColor);
+			background-color: var(--grayAccent);
 		}
 		&:hover i {
 			transform: translateX(100%);
