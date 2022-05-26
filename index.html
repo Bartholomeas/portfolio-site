@@ -19,25 +19,24 @@
 <body data-theme="light">
 
     <nav class="nav">
-        <div class="nav__wrapper">
+    <div class="nav__wrapper">
 
-            <a class="nav__logo--link" href="#">
-                <img src="../dist/img/logo.svg" alt="Logo z literą B" class="nav__logo--icon" />
-            </a>
-            <button class="nav__burger--btn" aria-label="Burger nav button">
-                <i class="nav__burger--icon fa-solid fa-bars"></i>
-            </button>
+        <a class="nav__logo--link" href="#">
+            <img src="../dist/img/logo.svg" alt="Logo z literą B" class="nav__logo--icon" />
+        </a>
+        <button class="nav__burger--btn" aria-label="Burger nav button">
+            <i class="nav__burger--icon fa-solid fa-bars"></i>
+        </button>
 
-            <ul class="nav__list">
-                <li><a class="nav__list--item" href="#about">O mnie</a></li>
-                <li><a class="nav__list--item" href="#speciality">Specjalności</a></li>
-                <li><a class="nav__list--item" href="#projects">Projekty</a></li>
-                <li><a class="nav__list--item" href="#contact">Kontakt</a></li>
-            </ul>
-        </div>
+        <ul class="nav__list">
+            <li><a class="nav__list--item" href="#about">O mnie</a></li>
+            <li><a class="nav__list--item" href="#speciality">Specjalności</a></li>
+            <li><a class="nav__list--item" href="#projects">Projekty</a></li>
+            <li><a class="nav__list--item" href="#contact">Kontakt</a></li>
+        </ul>
+    </div>
 
-    </nav>
-    <section>
+</nav>    <section>
         <div class="landing__wrapper">
 
             <div class="landing__background">
@@ -127,7 +126,7 @@
 
                         <!-- ORNAMENTY -->
                         <img class="speciality__ornament ornament__circle-lined--blue"
-                            src="../dist/img/bgBlueLinesCircle.svg" alt="">
+                            src="../dist/img/bgBlueLinesCircle.svg">
                         <img class="speciality__ornament ornament__spring--yellow" src="../dist/img/bgYellowSpring.svg"
                             alt="">
                         <img class="speciality__ornament ornament__spring--blue" src="../dist/img/bgBlueSpring.svg"
@@ -338,8 +337,12 @@
             </div>
 
             <div class="contact__container">
-
                 <form action="/formscript.php" class="contact__form" method="POST">
+
+                    <div class="contact__error-box">
+                        <span class="contact__error-message">Popraw adres e-mail! </span>
+                    </div>
+
                     <div class="contact__form--item">
                         <label for="name-input" class="contact__form--label">Twoje imie</label>
                         <input type="text" id="name-input" name="name-input" class="form__input">
@@ -356,7 +359,7 @@
                         <label for="message-input" class="contact__form--label">Wiadomość</label>
                         <textarea type="text" id="message-input" name="message-input" class="form__input"></textarea>
                     </div>
-                    <button type="submit" class="button__primary about__button contact__button"
+                    <button id="form__button" type="submit" class="button__primary about__button contact__button"
                         style="z-index:10000;">Wyślij wiadomość <i
                             class="button__icon fa-solid fa-circle-right"></i></button>
                 </form>
@@ -399,8 +402,8 @@
 
 
     <div class="footer__wrapper">
-        <h4 class="footer__header">Bartosz Stefaniak &copy;<span class="footer__year"></span></h4>
-    </div>
+    <h4 class="footer__header">Bartosz Stefaniak &copy;<span class="footer__year"></span></h4>
+</div>
 
 
     <script type="module" src="../dist/js/main.min.js"></script>
