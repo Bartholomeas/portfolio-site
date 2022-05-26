@@ -7,6 +7,9 @@
     <meta name="description" content="Autor: Bartosz Stefaniak,
     Freelancer, FrontendDeveloper, programista">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@400;700&display=swap"
@@ -337,8 +340,8 @@
             </div>
 
             <div class="contact__container">
-                <form action="/formscript.php" class="contact__form" method="POST">
 
+                <form action="formscript.php" class="contact__form" method="POST">
                     <div class="contact__error-box">
                         <span class="contact__error-message">Popraw adres e-mail! </span>
                     </div>

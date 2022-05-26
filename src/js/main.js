@@ -7,7 +7,9 @@ const formButton = document.querySelector('#form__button');
 
 const errorBox = document.querySelector('.contact__error-box');
 const errorParagraph = document.querySelector('.contact__error-message');
-// const formInputs = document.querySelectorAll('.form__input');
+
+const formInputs = document.querySelectorAll('.form__input');
+
 const nameInput = document.querySelector('#name-input');
 const emailInput = document.querySelector('#email-input');
 const titleInput = document.querySelector('#title-input');
@@ -23,12 +25,6 @@ function handleNavbar() {
 	console.log('ebebe');
 	navList.classList.toggle('active');
 }
-
-function getDate() {
-	const date = new Date().getFullYear();
-	footerYear.textContent = date;
-}
-getDate();
 
 function validateEmailInput() {
 	if (!emailRegex.test(emailInput)) {
@@ -86,8 +82,10 @@ function validateInputs() {
 }
 
 function sendMessage(e) {
-	e.preventDefault();
-	if (validateInputs()) contactForm.submit();
+	// e.preventDefault();
+	// validateInputs();
+	// if (validateInputs()) contactForm.submit();
+	validateInputs();
 	console.log('wyslana wiadomosc');
 }
 
