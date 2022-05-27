@@ -22,7 +22,6 @@ let errorText;
 let validInputs = 0;
 
 function handleNavbar() {
-	console.log('ebebe');
 	navList.classList.toggle('active');
 }
 
@@ -85,9 +84,40 @@ function sendMessage(e) {
 	// e.preventDefault();
 	// validateInputs();
 	// if (validateInputs()) contactForm.submit();
-	validateInputs();
+	// validateInputs();
 	console.log('wyslana wiadomosc');
 }
 
+const formData = new FormData();
+formData.append('name', 'Bartosz');
+formData.append('email', 'veir@onet.pl');
+formData.append('subject', 'Tytulowy tytul maila');
+formData.append('message', 'Gratulacje uzytkowniku, wygrales nowego iphone 4s');
+
+async function sendToPHP(e) {
+	e.preventDefault();
+	// headers: {"Access-Control-Allow-Headers: content-type"},
+
+	const contactData = {
+		name: 'Bartosz',
+		email: 'veir@onet.pl',
+		subject: 'subject to jest taki tytul',
+		message: 'gratulacje uzytkowniku wygrales',
+	};
+
+	await axios
+		.post('http://localhost:8000/formscript.php', contactData, { headers: { 'Content-Type': 'application/json' } })
+		.then(res => console.log(res))
+		.catch(err => console.log(err));
+
+	console.log('dziala');
+
+	// formData.append('To nazwa', 'A to wartosc');
+	// for (let value of formData.values()) {
+	// 	console.log(value);
+	// }
+}
+
 burgerBtn.addEventListener('click', handleNavbar);
-contactForm.addEventListener('submit', sendMessage);
+// contactForm.addEventListener('submit', sendMessage);
+// formButton.addEventListener('click', sendToPHP);
