@@ -139,3 +139,43 @@
 		}
 	}
 }
+
+.quotes {
+	&__wrapper {
+		// position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--grayAccent);
+		width: 100%;
+		height: 250px;
+	}
+
+	&__text-box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		max-width: 600px;
+		height: 100%;
+		padding: var(--standardPadding) var(--bigPadding);
+	}
+
+	&__heading {
+		color: var(--fontShade);
+		font-weight: 400;
+		font-size: var(--mediumText);
+		text-align: center;
+	}
+	&__author {
+		font-size: var(--smallText);
+	}
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 2rem;
+		transform: translateY(-50%);
+	}
+}
