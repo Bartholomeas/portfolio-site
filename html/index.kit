@@ -313,7 +313,7 @@
     </section>
 
     <section id="contact">
-        <div class="contact__wrapper standard-box">
+        <div class="contact__wrapper  standard-box">
             <div class="heading__container">
                 <span class="heading__circle"></span>
                 <h2 class="heading__text">Psst, możesz do mnie napisać.</h2>
@@ -324,8 +324,10 @@
                 <form action="" method="POST" class="contact__form">
 
                     <div class="loading-box">
-                        <img src="../dist/img/bgDottedCircle.svg" class="spinner"></img>
+                        <p class="loading__message">Wysyłanie..</p>
+                        <img src="../dist/img/bgDottedCircle.svg" alt="Kręcące się koło ładowania" class="spinner" />
                     </div>
+
                     <div class="contact__error-box">
                         <span class="contact__error-message">Popraw adres e-mail! </span>
                     </div>
@@ -350,6 +352,12 @@
                         style="z-index:10000;">Wyślij wiadomość <i
                             class="button__icon fa-solid fa-circle-right"></i></button>
                 </form>
+                <div class="popup__wrapper">
+                    <img class="popup__avatar" src="/dist/img/faceFingers.png"
+                        alt="Postać przedstawiająca mnie ze zwiniętymi palcami">
+                    <p class="popup__text">Wiadomość wysłana, dziękuje za kontakt!</p>
+                </div>
+
 
                 <div class="contact__socials-box">
                     <h3 class="socials__header">Lub znajdź mnie tutaj</h3>

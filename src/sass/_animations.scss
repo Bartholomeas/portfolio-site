@@ -1,16 +1,33 @@
-@keyframes movingBg {
-	from {
-		background-position: left bottom;
-	}
-	to {
-		background-position: right top;
-	}
-}
 @keyframes rotatingRight {
 	from {
 		transform: translate(-30%, 30%) rotate(0);
 	}
 	to {
 		transform: translate(-30%, 30%) rotate(360deg);
+	}
+}
+@keyframes spinCircle {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes avatarWiggle {
+	0% {
+		transform: translate(4rem, 0);
+	}
+	25% {
+		transform: translate(4rem, -2rem);
+	}
+
+	50% {
+		transform: translate(4rem, 1rem);
+	}
+
+	100% {
+		transform: translate(4rem, 0);
 	}
 }

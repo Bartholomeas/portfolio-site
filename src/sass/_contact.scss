@@ -1,3 +1,13 @@
+.fade::before {
+	position: fixed;
+	content: '';
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
 .contact {
 	&__wrapper {
 		display: flex;
@@ -14,6 +24,7 @@
 			padding: var(--standardPadding) var(--bigPadding);
 		}
 	}
+
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -49,6 +60,7 @@
 	}
 
 	&__form {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		gap: 1.6rem;
@@ -177,5 +189,92 @@
 	}
 	&__button {
 		box-shadow: none;
+	}
+}
+
+.loading-box {
+	position: fixed;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 200px;
+	padding: 1rem;
+	border-radius: 50%;
+	background-color: var(--primaryColor);
+	z-index: 1000000;
+	@include shadow;
+	.spinner {
+		position: absolute;
+		width: 90%;
+		height: 90%;
+		object-fit: 1 / 1;
+		border-radius: 50%;
+		animation: spinCircle 15s linear infinite;
+	}
+	.loading__message {
+		position: absolute;
+		color: var(--fontColor);
+		font-weight: 700;
+		font-size: var(--smallText);
+	}
+	.loading__background {
+		top: 0;
+		left: 0;
+		position: fixed;
+		opacity: 0.5;
+		background: #000;
+		width: 100%;
+		height: 100%;
+		z-index: 10000;
+	}
+}
+.active-spinner {
+	display: flex;
+}
+
+.popup {
+	&__wrapper {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 300px;
+		height: 100px;
+		bottom: 5rem;
+		left: 50%;
+
+		transform: translateX(calc(-50% - 2rem)) translateY(200px) scale(0);
+
+		padding: var(--standardPadding);
+		padding-right: 5rem;
+		border-radius: var(--borderRadius);
+		background-color: var(--success);
+		z-index: 1000000;
+		transition: transform 0.2s ease;
+		@include shadow;
+	}
+
+	&-active {
+		transform: translateX(calc(-50% - 2rem)) translateY(0) scale(1);
+		.popup__avatar {
+			animation: avatarWiggle 1s ease;
+		}
+	}
+
+	&__text {
+		color: var(--white);
+	}
+	&__avatar {
+		position: absolute;
+		right: 0;
+		transform: translateX(4rem);
+		width: auto;
+		height: 150px;
+		object-fit: cover;
+		// transition: transform 0.8s ease;
 	}
 }

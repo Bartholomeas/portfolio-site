@@ -4,6 +4,7 @@ const footerYear = document.querySelector('.footer__year');
 
 const contactForm = document.querySelector('.contact__form');
 const formButton = document.querySelector('#form__button');
+const popup = document.querySelector('.popup__wrapper');
 
 const errorBox = document.querySelector('.contact__error-box');
 const errorParagraph = document.querySelector('.contact__error-message');
@@ -14,6 +15,8 @@ const nameInput = document.querySelector('#name-input');
 const emailInput = document.querySelector('#email-input');
 const titleInput = document.querySelector('#title-input');
 const messageInput = document.querySelector('#message-input');
+
+const contactSpinner = document.querySelector('.loading-box');
 
 let emailRegex = new RegExp(
 	"([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|[[\t -Z^-~]*])"
@@ -86,6 +89,8 @@ function validateInputs() {
 // }
 async function sendMessage(e) {
 	e.preventDefault();
+	contactForm.classList.add('fade');
+	contactSpinner.classList.add('active-spinner');
 	if (validateInputs()) {
 		const contactFormData = new FormData();
 		contactFormData.append(nameInput.name, nameInput.value);
@@ -94,10 +99,29 @@ async function sendMessage(e) {
 		contactFormData.append(messageInput.name, messageInput.value);
 		await axios
 			.post('/formscript.php', contactFormData)
-			.then(res => console.log(res))
-			.catch(err => console.log(err));
+			.then(res => {
+				contactForm.classList.remove('fade');
+				contactSpinner.classList.remove('active-spinner');
+				popup.classList.add('popup-active');
+				setTimeout(() => {
+					popup.classList.remove('popup-active');
+				}, 3000);
+			})
+			.catch(err => {
+				contactForm.classList.remove('fade');
+				contactSpinner.classList.remove('active-spinner');
+				console.log(err);
+			});
+	} else {
+		contactForm.classList.remove('fade');
+		contactSpinner.classList.remove('active-spinner');
 	}
 }
+
+// formButton.addEventListener('click', () => {
+// 	popup.classList.toggle('popup-active');
+// });
+
 console.log(nameInput.value);
 burgerBtn.addEventListener('click', handleNavbar);
 contactForm.addEventListener('submit', sendMessage);
