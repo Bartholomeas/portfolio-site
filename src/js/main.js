@@ -80,44 +80,26 @@ function validateInputs() {
 	}
 }
 
-function sendMessage(e) {
-	// e.preventDefault();
-	// validateInputs();
-	// if (validateInputs()) contactForm.submit();
-	// validateInputs();
-	console.log('wyslana wiadomosc');
-}
-
-const formData = new FormData();
-formData.append('name', 'Bartosz');
-formData.append('email', 'veir@onet.pl');
-formData.append('subject', 'Tytulowy tytul maila');
-formData.append('message', 'Gratulacje uzytkowniku, wygrales nowego iphone 4s');
-
-async function sendToPHP(e) {
+// function sendMessage(e) {
+// 	e.preventDefault();
+// 	// if (validateInputs()) contactForm.submit();
+// }
+async function sendMessage(e) {
 	e.preventDefault();
-	// headers: {"Access-Control-Allow-Headers: content-type"},
-
-	const contactData = {
-		name: 'Bartosz',
-		email: 'veir@onet.pl',
-		subject: 'subject to jest taki tytul',
-		message: 'gratulacje uzytkowniku wygrales',
-	};
-
-	await axios
-		.post('http://localhost:8000/formscript.php', contactData, { headers: { 'Content-Type': 'application/json' } })
-		.then(res => console.log(res))
-		.catch(err => console.log(err));
-
-	console.log('dziala');
-
-	// formData.append('To nazwa', 'A to wartosc');
-	// for (let value of formData.values()) {
-	// 	console.log(value);
-	// }
+	if (validateInputs()) {
+		const contactFormData = new FormData();
+		contactFormData.append(nameInput.name, nameInput.value);
+		contactFormData.append(emailInput.name, emailInput.value);
+		contactFormData.append(titleInput.name, titleInput.value);
+		contactFormData.append(messageInput.name, messageInput.value);
+		await axios
+			.post('/formscript.php', contactFormData)
+			.then(res => console.log(res))
+			.catch(err => console.log(err));
+	}
 }
-
+console.log(nameInput.value);
 burgerBtn.addEventListener('click', handleNavbar);
+contactForm.addEventListener('submit', sendMessage);
 // contactForm.addEventListener('submit', sendMessage);
-// formButton.addEventListener('click', sendToPHP);
+// , { headers: { 'Content-Type': 'application/json' } }

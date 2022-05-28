@@ -320,8 +320,12 @@
             </div>
 
             <div class="contact__container">
+                <!-- action="/formscript.php" method="post"  -->
+                <form action="" method="POST" class="contact__form">
 
-                <form action="/formscript.php" method="post" class="contact__form">
+                    <div class="loading-box">
+                        <img src="../dist/img/bgDottedCircle.svg" class="spinner"></img>
+                    </div>
                     <div class="contact__error-box">
                         <span class="contact__error-message">Popraw adres e-mail! </span>
                     </div>
@@ -380,9 +384,6 @@
 
         </div>
     </section>
-
-
-
 
     <!-- @include _footer.kit -->
 
