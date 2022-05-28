@@ -137,9 +137,6 @@
 	&__ornament {
 		position: absolute;
 		width: 10rem;
-		// left: 50%;
-		// top: 50%;
-		// transform: translate(-50%, -50%);
 		z-index: -10;
 	}
 }
@@ -184,7 +181,6 @@
 	&__circle-dotted--gray {
 		bottom: 0;
 		left: 0;
-		animation: rotatingRight 30s infinite alternate;
 		transform: translate(-30%, 30%);
 	}
 	&__circle-dotted--light-gray {

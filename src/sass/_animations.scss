@@ -1,11 +1,3 @@
-@keyframes rotatingRight {
-	from {
-		transform: translate(-30%, 30%) rotate(0);
-	}
-	to {
-		transform: translate(-30%, 30%) rotate(360deg);
-	}
-}
 @keyframes spinCircle {
 	from {
 		transform: rotate(0deg);
