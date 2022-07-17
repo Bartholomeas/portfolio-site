@@ -41,11 +41,15 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		// justify-content: center;
+		justify-content: center;
 		width: 100%;
 		height: 100%;
 		padding: var(--standardPadding);
 		max-width: var(--maxWidth);
+
+		@media only screen and(min-width:768px) {
+			justify-content: flex-start;
+		}
 	}
 	&__specialities {
 		display: none;
@@ -98,8 +102,9 @@
 		@include shadow;
 
 		&-image {
-			height: 300px;
-			transform: translate(2rem, 2rem);
+			height: 250px;
+			width: auto;
+			transform: translate(1rem, 2rem);
 		}
 
 		&-name {

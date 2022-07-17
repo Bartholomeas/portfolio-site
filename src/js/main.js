@@ -18,6 +18,15 @@ const messageInput = document.querySelector('#message-input');
 
 const contactSpinner = document.querySelector('.loading-box');
 
+footerYear.textContent = new Date().getFullYear();
+
+const navLinks = document.querySelectorAll('.nav__list--item');
+navLinks.forEach(link =>
+	link.addEventListener('click', () => {
+		navList.classList.remove('active');
+	})
+);
+
 let emailRegex = new RegExp(
 	"([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|[[\t -Z^-~]*])"
 );
@@ -83,10 +92,40 @@ function validateInputs() {
 	}
 }
 
-// function sendMessage(e) {
-// 	e.preventDefault();
-// 	// if (validateInputs()) contactForm.submit();
-// }
+async function sendMessage(e) {
+	e.preventDefault();
+	contactForm.classList.add('fade');
+	contactSpinner.classList.add('active-spinner');
+	if (validateInputs()) {
+		const contactFormData = new FormData();
+		contactFormData.append(nameInput.name, nameInput.value);
+		contactFormData.append(emailInput.name, emailInput.value);
+		contactFormData.append(titleInput.name, titleInput.value);
+		contactFormData.append(messageInput.name, messageInput.value);
+		await axios
+			.post('/formscript.php', contactFormData)
+			.then(res => {
+				contactForm.classList.remove('fade');
+				contactSpinner.classList.remove('active-spinner');
+				popup.classList.add('popup-active');
+				setTimeout(() => {
+					popup.classList.remove('popup-active');
+				}, 3000);
+			})
+			.catch(err => {
+				contactForm.classList.remove('fade');
+				contactSpinner.classList.remove('active-spinner');
+				console.log(err);
+			});
+	} else {
+		contactForm.classList.remove('fade');
+		contactSpinner.classList.remove('active-spinner');
+	}
+}
+
+console.log(nameInput.value);
+burgerBtn.addEventListener('click', handleNavbar);
+contactForm.addEventListener('submit', sendMessage);
 console.log(
 	`  %c                                                                                                                                                                                                                           
 												((,,,(&                                 
@@ -121,43 +160,6 @@ Na ścianach łęciny nie znajdziesz szczeciny
 `,
 	'color:#85a3c9'
 );
-async function sendMessage(e) {
-	e.preventDefault();
-	contactForm.classList.add('fade');
-	contactSpinner.classList.add('active-spinner');
-	if (validateInputs()) {
-		const contactFormData = new FormData();
-		contactFormData.append(nameInput.name, nameInput.value);
-		contactFormData.append(emailInput.name, emailInput.value);
-		contactFormData.append(titleInput.name, titleInput.value);
-		contactFormData.append(messageInput.name, messageInput.value);
-		await axios
-			.post('/formscript.php', contactFormData)
-			.then(res => {
-				contactForm.classList.remove('fade');
-				contactSpinner.classList.remove('active-spinner');
-				popup.classList.add('popup-active');
-				setTimeout(() => {
-					popup.classList.remove('popup-active');
-				}, 3000);
-			})
-			.catch(err => {
-				contactForm.classList.remove('fade');
-				contactSpinner.classList.remove('active-spinner');
-				console.log(err);
-			});
-	} else {
-		contactForm.classList.remove('fade');
-		contactSpinner.classList.remove('active-spinner');
-	}
-}
 
-// formButton.addEventListener('click', () => {
-// 	popup.classList.toggle('popup-active');
-// });
-
-console.log(nameInput.value);
-burgerBtn.addEventListener('click', handleNavbar);
-contactForm.addEventListener('submit', sendMessage);
-// contactForm.addEventListener('submit', sendMessage);
-// , { headers: { 'Content-Type': 'application/json' } }
+const buttonZwijacz = document.querySelector('.button-zwijacz');
+const specialityBox = document.querySelectorAll('.speciality__box--text');

@@ -26,7 +26,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 2rem;
+		gap: 1rem;
 		height: auto;
 		width: 100%;
 		background: none;
@@ -85,6 +85,7 @@
 			@media only screen and(min-width:768px) {
 				position: absolute;
 				left: 0;
+				bottom: -2rem;
 			}
 		}
 		&--content-box {
@@ -97,12 +98,14 @@
 				width: 100%;
 				// height: 100%;
 				padding-left: 35%;
+				padding-right: 1rem;
 			}
 			@media only screen and(min-width: 900px) {
-				padding-left: 15rem;
+				padding-left: 16rem;
+				padding-right: 1rem;
 			}
 			@media only screen and(min-width: 1000px) {
-				padding-left: 17rem;
+				padding-left: 19rem;
 			}
 		}
 
@@ -131,12 +134,12 @@
 	&__button {
 		width: 100%;
 		color: var(--fontColor);
-		background-color: var(--primaryColor);
+		background-color: var(--grayAccent);
 		align-self: flex-end;
 
 		&:hover {
 			color: var(--fontColor);
-			background-color: var(--grayAccent);
+			background-color: var(--primaryColor);
 		}
 		&:hover i {
 			transform: translateX(100%);
